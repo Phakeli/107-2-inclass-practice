@@ -15,4 +15,13 @@ dialogue <- c("小明說：'明天不用上課。'",
 
 cat(dialogue, sep="\n")
 ```
-++
+
+```{r}
+birthplace <- factor(
+  c("台北市", "台北市", "台北市", "台中市", "台中市"))
+class(birthplace)
+levels(birthplace)
+as.integer(birthplace)
+```
+
+
