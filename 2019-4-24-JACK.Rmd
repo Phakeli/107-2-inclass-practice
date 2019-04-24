@@ -1,0 +1,80 @@
+---
+title: "2019-4-24"
+author: "Phakeli"
+date: "2019年4月24日"
+output: html_document
+---
+
+```{r}
+m2<-matrix(c("a","b","c","d"),2,2)
+class(m2)
+typeof(m2)
+a<-m2[[1]]
+c<-m2[[3]]
+bd<-m2[2,]
+a
+c
+bd
+```
+
+```{r}
+Mat1 <- matrix(
+  c(1:6), 2,3
+)
+Mat1
+```
+
+```{r}
+StuList <- list(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuList 
+StuList[[2]][3]
+```
+
+```{r}
+StuDF <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuDF[["姓名"]][[3]]
+```
+
+
+```{r}
+chosenletters <- letters[1:16]
+matobj2 <- matrix(chosenletters,4,4)
+matobj2
+```
+```{r}
+LETTERS
+chosenLETTERS <- LETTERS[1:8]
+m <- matrix(chosenLETTERS,2,4)
+m
+tolower(m) # 轉成小寫
+m
+toupper(m) # 轉成大寫
+m
+
+```
+
+```{r}
+chosenLETTERS<-LETTERS[1:16]
+matObj1<-matrix(chosenLETTERS,4,4)
+matObj1
+```
+```{r}
+
+```
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+```{r}
+classSurvey[c(1:60),c(4,5)]
+classSurvey[,c(4,5)]
+```
+
