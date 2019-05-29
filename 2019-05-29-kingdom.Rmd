@@ -1,0 +1,61 @@
+---
+title: "2019-5-29-Kingdom"
+author: "Phakeli"
+date: "2019年5月29日"
+output: html_document
+---
+
+```{r}
+textbookURL <- function(){
+  browseURL("https://bookdown.org/tpemartin/ntpu-programming-for-data-science/")
+}
+```
+
+```{r}
+demand_supply_fun <- function(P,a,b,c,d){
+  Qs <- a+b*P
+  Qd <- c-d*P
+  es <- Qs -Qd
+  return(list(
+    供給量=Qs,
+    需求量=Qd,
+    超額供給量=es
+  )
+  )
+}
+```
+```{r}
+gpa_fun <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  if(studentID!="92aS67fee"){
+    message("查無此學號")
+  } else {
+  return(GPA)}
+}
+
+gpa_fun("92aS67fee") 
+gpa_fun("aa829838s")
+```
+
+```{r}
+fizzbuzz<-function(x){
+  if(x%%3==0&x%%5!=0){
+    print("fizz")
+  }
+  else if(x%%5==0&x%%3!=0){
+    print("buzz")
+  }
+  else if(x%%5==0&x%%3==0){
+    print("fizzbuzz")
+  }
+  else{
+    print(x)
+  }
+}
+```
+
